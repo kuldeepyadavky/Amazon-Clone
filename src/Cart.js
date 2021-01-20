@@ -1,5 +1,6 @@
 import React from 'react'
 import './Cart.css'
+import Subtotal from './Subtotal'
 
 function Cart() {
 	return (
@@ -12,7 +13,9 @@ function Cart() {
 				</div>
 			</div>
 
-			<div className='cart_right'>{/* SubTotal */}</div>
+			<div className='cart_right'>
+				<Subtotal />
+			</div>
 		</div>
 	)
 }
