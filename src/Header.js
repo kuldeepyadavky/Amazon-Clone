@@ -2,11 +2,17 @@ import React from 'react'
 import './Header.css'
 import SearchIcon from '@material-ui/icons/Search'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
+import { useStateValue } from './StateProvider'
+import { Link } from 'react-router-dom'
 
 function Header() {
+	const [{ basket, user }, dispatch] = useStateValue()
+
 	return (
 		<div className='header'>
-			<img className='header_logo' src='img/header_logo.png' alt='Logo' />
+			<Link to='/'>
+				<img className='header_logo' src='img/header_logo.png' alt='Logo' />
+			</Link>
 
 			<div className='header_search'>
 				<input className='header_searchInput' type='text' />
@@ -28,10 +34,14 @@ function Header() {
 					<span className='header_optionLine2'>Prime</span>
 				</div>
 
-				<div className='header_optionBasket'>
-					<ShoppingBasketIcon />
-					<span className='header_optionLine2 header_basketCount'>0</span>
-				</div>
+				<Link to='/checkout'>
+					<div className='header_optionBasket'>
+						<ShoppingBasketIcon />
+						<span className='header_optionLine2 header_basketCount'>
+							{basket?.length}
+						</span>
+					</div>
+				</Link>
 			</div>
 		</div>
 	)
