@@ -1,6 +1,6 @@
 import React from 'react'
 import './Subtotal.css'
-import CurrencyFormat from 'react-currenformat'
+import CurrencyFormat from 'react-currency-format'
 import { getBasketTotal } from './reducer'
 import { useHistory } from 'react-router-dom'
 import { useStateValue } from './StateProvider'

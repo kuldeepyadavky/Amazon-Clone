@@ -12,11 +12,11 @@ function App() {
 				<Header />
 
 				<Switch>
-					<Route path='/'>
-						<Home />
-					</Route>
 					<Route path='/cart'>
 						<Cart />
+					</Route>
+					<Route path='/'>
+						<Home />
 					</Route>
 				</Switch>
 			</div>
