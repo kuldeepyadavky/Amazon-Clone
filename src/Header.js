@@ -8,7 +8,8 @@ function Header() {
 		<div className='header'>
 			<img
 				className='header_logo'
-				src='../public/img/header_logo.png'
+				src='img/header_logo.png'
+		
 			/>
 
 			<div className='header_search'>
