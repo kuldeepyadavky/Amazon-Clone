@@ -34,6 +34,9 @@ function App() {
 		<Router>
 			<div className='app'>
 				<Switch>
+					<Route path='/login'>
+						<Login />
+					</Route>
 					<Route path='/cart'>
 						<Header />
 						<Cart />
@@ -41,9 +44,6 @@ function App() {
 					<Route path='/'>
 						<Header />
 						<Home />
-					</Route>
-					<Route path='/login'>
-						<Login />
 					</Route>
 				</Switch>
 			</div>
